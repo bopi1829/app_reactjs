@@ -12,9 +12,10 @@ class StateCompo extends Component {
         this.state = {nom : ""};
     }
 
-    handleChange() {
-        console.log("Je passe ici ")
-                
+    handleChange = (e) => {
+        console.log("value dans COMPO " + e.target.value)
+        this.setState({nom : e.target.value});
+        this.props.onInputChange(e.target.value);
     }
 
     render() {
