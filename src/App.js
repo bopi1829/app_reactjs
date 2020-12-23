@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {PureCompo, PureCompoProps} from './components/PureCompo';
+import StateCompo from './components/StateCompo';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         </p>
         <PureCompo/>
         <PureCompoProps label={"Pierrick Boucharlat"} age={37}/>
+        <StateCompo label={"Alexandra"}/>
         <a
           className="App-link"
           href="https://reactjs.org"
