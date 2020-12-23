@@ -3,6 +3,7 @@ import './App.css';
 import {PureCompo, PureCompoProps} from './components/PureCompo';
 import StateCompo from './components/StateCompo';
 import React ,{Component }from 'react';
+import CompoCycleDeVie from "./components/CompoCycleDeVie";
 
 class App extends Component {  
   constructor(props) {
@@ -28,6 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <CompoCycleDeVie/>
         {mesLabel.map((libelle) => 
           <StateCompo key={libelle} label={libelle} onInputChange = {this.onInputChange}/>
         )}
