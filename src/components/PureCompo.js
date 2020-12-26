@@ -13,12 +13,26 @@ export function PureCompo() {
     )
 }
 
-export function PureCompoProps({label, age}) {
+export function PureCompoProps({label}) {
     return(
         <div>
-            <h3 className="pure-h3">Pure props Compo {label} {age}</h3>
+            <h3 className="pure-h3">Pure props Compo {label}</h3>
         </div>
     )
 }
 
-//export default PureCompo;
+export function NewCompo() {
+    return(
+        <div>
+            <h4 className="pure-h4">Nouveau composant</h4>
+        </div>
+    )
+}
+
+export function NewCompoProps({firstName, lastName}) {
+    return(
+        <div>
+            <h4 className="pure-h4">Nouveau composant {firstName} {lastName}</h4>
+        </div>
+    )
+}

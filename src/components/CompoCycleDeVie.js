@@ -2,7 +2,7 @@
  * @author Bopi1829
  * Premier composant state react
  */
-import React ,{Component }from 'react';
+import React ,{Component} from 'react';
 
 class CompoCycleDeVie extends Component {
     constructor(props) {

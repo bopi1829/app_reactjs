@@ -5,7 +5,7 @@
 import React ,{Component }from 'react';
 import './StateCompo.css';
 
-class StateCompo extends Component {
+export class StateCompo extends Component {
     constructor(props) {
         super(props);
         //console.log("label " + props.label);
@@ -13,7 +13,6 @@ class StateCompo extends Component {
     }
 
     handleChange = (e) => {
-        console.log("value dans COMPO " + e.target.value)
         this.setState({nom : e.target.value});
         this.props.onInputChange(e.target.value);
     }
@@ -21,11 +20,30 @@ class StateCompo extends Component {
     render() {
         return(
             <div>
-                <h3 className="state-h3">Compo State {this.props.label} </h3>
-                <input type="text" value={this.state.nom} onChange={this.handleChange}></input>
+                <h3 className = "state-h3">Compo State {this.props.label} </h3>
+                <input type = "text" value = {this.state.nom} onChange = {this.handleChange}></input>
             </div>
         )
     }
 }
 
-export default StateCompo;
+export class NewStateCompo extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {nom : ""};
+    }
+
+    changeName = (e) => {
+        console.log('Je passe dans la fonction')
+        this.setState({nom: e.target.value})
+    }
+
+    render() {
+        return(
+            <div>
+                <h5 className="state-h5">Nouveau Compo State {this.state.nom}</h5>
+                <input type = "text" value = {this.state.nom} onChange={this.changeName} ></input>
+            </div>
+        )
+    }
+}

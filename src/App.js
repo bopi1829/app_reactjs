@@ -1,42 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
-import {PureCompo, PureCompoProps} from './components/PureCompo';
-import StateCompo from './components/StateCompo';
-import React ,{Component }from 'react';
+import {NewCompo, PureCompo, PureCompoProps, NewCompoProps} from './components/PureCompo';
+import {StateCompo, NewStateCompo} from './components/StateCompo';
+import React ,{Component} from 'react';
 import CompoCycleDeVie from "./components/CompoCycleDeVie";
 
 class App extends Component {  
   constructor(props) {
     super(props);
-    this.state = {
-    stateApp: ""
-    }
+    this.state = {stateApp: ""}
   }
 
   onInputChange = (val) => {
-    console.log("val dans APP -> " + val)
+    //console.log("val dans APP -> " + val)
     this.setState({stateApp: val})
   }
 
   render() {
     let mesLabel = [];
     mesLabel.push("Pierrick")
-    mesLabel.push("Alexandra")
-    mesLabel.push("Mateo")
-    mesLabel.push("Nana")
-
-
+        
     return (
       <div className="App">
         <header className="App-header">
         <CompoCycleDeVie/>
-        {mesLabel.map((libelle) => 
+        {mesLabel.map((libelle) =>
           <StateCompo key={libelle} label={libelle} onInputChange = {this.onInputChange}/>
         )}
         
-       
+        <NewStateCompo name={'Bopi1829'}/>
+
+        <NewCompo/> 
+        <NewCompoProps firstName={'Alexandra'} lastName={'Lacoste'}/>      
         <PureCompo/>
-        {this.state.stateApp ? <PureCompoProps label={this.state.stateApp} age={37}/> : <div>Champ non rempli</div>}
+        {this.state.stateApp ? <PureCompoProps label={this.state.stateApp}/> : <div>Champ non rempli</div>}
         
   
         <img src={logo} className="App-logo" alt="logo" />
