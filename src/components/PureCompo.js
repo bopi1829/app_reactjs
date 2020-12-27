@@ -8,7 +8,7 @@ import './PureCompo.css';
 export function PureCompo() {
     return(
         <div>
-            <h2 className="pure-h2">Pure Compo</h2>
+            <h2 className = "pure-h2">Pure Compo</h2>
         </div>
     )
 }
@@ -16,7 +16,7 @@ export function PureCompo() {
 export function PureCompoProps({label}) {
     return(
         <div>
-            <h3 className="pure-h3">Pure props Compo {label}</h3>
+            <h3 className = "pure-h3">Pure props Compo {label}</h3>
         </div>
     )
 }
@@ -24,7 +24,7 @@ export function PureCompoProps({label}) {
 export function NewCompo() {
     return(
         <div>
-            <h4 className="pure-h4">Nouveau composant</h4>
+            <h4 className = "pure-h4">Nouveau composant</h4>
         </div>
     )
 }
@@ -32,7 +32,7 @@ export function NewCompo() {
 export function NewCompoProps({firstName, lastName}) {
     return(
         <div>
-            <h4 className="pure-h4">Nouveau composant {firstName} {lastName}</h4>
+            <h4 className = "pure-h4">Nouveau composant {firstName} {lastName}</h4>
         </div>
     )
 }

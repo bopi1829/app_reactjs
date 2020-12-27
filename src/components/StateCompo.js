@@ -34,15 +34,14 @@ export class NewStateCompo extends Component {
     }
 
     changeName = (e) => {
-        console.log('Je passe dans la fonction')
         this.setState({nom: e.target.value})
     }
 
     render() {
         return(
             <div>
-                <h5 className="state-h5">Nouveau Compo State {this.state.nom}</h5>
-                <input type = "text" value = {this.state.nom} onChange={this.changeName} ></input>
+                <h5 className = "state-h5">Nouveau Compo State {this.state.nom}</h5>
+                <input type = "text" value = {this.state.nom} onChange = {this.changeName} ></input>
             </div>
         )
     }
