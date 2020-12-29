@@ -8,28 +8,30 @@ import JeuxRow from './JeuRow';
 
 class JeuxTable extends Component {
     constructor(props) {
-        super(props);
-        console.log("Les jeux de JeuxTable : ", props.jeux)
-        
-
+        super(props)  
     }
 
     render() {
 
         const filterText = this.props.filterText;
         const inStockOnly = this.props.inStockOnly;
+        let filterCategory ;
         const rows = [];
         this.props.jeux.forEach(jeu => {
-            //console.log("jeu", jeu.name)
-            if (jeu.name.indexOf(filterText) === -1) {
+            
+            if (jeu.name.toLowerCase().indexOf(filterText) === -1) {
                 return;
             }
 
             if (inStockOnly && !jeu.stocked) {
                 return;
             }
-            
+
+            if (jeu.category !== filterCategory) {
+                rows.push(<JeuxCategory key = {jeu.category} category = {jeu.category}/>)
+            }
             rows.push(<JeuxRow key = {jeu.name} jeu = {jeu}/>);
+            filterCategory = jeu.category;
         });
         //rows.push(<JeuxRow key = "1" jeu/>);
         //rows.push(<JeuxRow key = "2"/>);

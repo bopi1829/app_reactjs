@@ -29,14 +29,14 @@ class App extends Component {
     JEUX.push({category: 'FPS', price: '10 €', stocked: false, name: 'Counter Srtike'});
     JEUX.push({category: 'FPS', price: '40 €', stocked: false, name: 'Battlefield'});
     JEUX.push({category: 'FPS', price: '20 €', stocked: true, name: 'Call Of Duty'});
-    JEUX.push({category: 'Aventure', price: '10 €', stocked: true, name: 'Tomb Raider'});
     JEUX.push({category: 'Aventure', price: '20 €', stocked: false, name: 'Uncharted'});
+    JEUX.push({category: 'Aventure', price: '10 €', stocked: true, name: 'Tomb Raider'});
     JEUX.push({category: 'Aventure', price: '50 €', stocked: true, name: 'Zelda'});
-    JEUX.push({category: 'Sport', price: '50 €', stocked: true, name: 'FIFA21'});
     JEUX.push({category: 'Sport', price: '45 €', stocked: false, name: 'NBA2K21'});
+    JEUX.push({category: 'Sport', price: '50 €', stocked: true, name: 'FIFA21'});
     JEUX.push({category: 'Sport', price: '30 €', stocked: false, name: 'ePES2021'});
-    JEUX.push({category: 'Course', price: '45 €', stocked: false, name: 'Gran Turismo 5'});
     JEUX.push({category: 'Course', price: '30 €', stocked: true, name: 'Colin McRae Rally'});
+    JEUX.push({category: 'Course', price: '45 €', stocked: false, name: 'Gran Turismo 5'});
     JEUX.push({category: 'Course', price: '20 €', stocked: false, name: 'Forza Motorsport'});
     JEUX.push({category: 'Action', price: '50 €', stocked: true, name: 'GTA V'});
     JEUX.push({category: 'Action', price: '20 €', stocked: false, name: "Assassin's Creed"});

@@ -6,8 +6,7 @@ import React ,{Component} from 'react';
 
 class JeuRow extends Component {
     constructor(props) {
-        super(props);
-        console.log('le jeu', props.jeu)
+        super(props)
     }
 
     render() {

@@ -9,20 +9,17 @@ import JeuxTable from './JeuxTable';
 class FilterableJeuxTable extends Component {
     constructor(props) {
         super(props);
-        //console.log("Les jeux : ", props.jeux)
         this.state = {
             filterText: "",
-            inStockOnly: false
+            inStockOnly: false,
         }
     }
 
     handleFilterTextChange = (e) => {
-        console.log("parent",e);
         this.setState({filterText: e})
     }
 
     handleInStockChange = (e) => {
-        console.log("parent", e);
         this.setState({inStockOnly: e})        
     }
 
