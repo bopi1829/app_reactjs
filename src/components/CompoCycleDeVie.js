@@ -27,20 +27,4 @@ export class CompoCycleDeVie extends Component {
     }    
 }
 
-export class CycleVieCompo extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount = () => {
-        console.log('Je passe dans le componentDidMount CycleVieCompo')
-    }
-
-    render () {
-        return(
-            <div>
-
-            </div>
-        )
-    }
-}
+export default CompoCycleDeVie;
